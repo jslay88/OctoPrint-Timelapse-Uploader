@@ -7,9 +7,10 @@ api:
 devel:
     virtualPrinter:
         enabled: true
-        autoconnect: true
-        baudrate: 0
-        port: VIRTUAL
+serial:
+    autoconnect: true
+    baudrate: 0
+    port: VIRTUAL
 plugins:
     announcements:
         _config_version: 1

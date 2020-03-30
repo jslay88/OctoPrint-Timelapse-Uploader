@@ -6,8 +6,8 @@ services:
     ports:
       - "5000:5000"
     volumes:
-      - ./:/octoprint_dropbox_timelapse
+      - ./:/octoprint_timelapse_uploader
       - octoprint:/home/octoprint
-    command: bash -c "python /octoprint_dropbox_timelapse/setup-dev-printer.py && pip install -U -e /octoprint_dropbox_timelapse && octoprint serve"
+    command: bash -c "python /octoprint_timelapse_uploader/setup-dev-printer.py && pip install -U -e /octoprint_timelapse_uploader && octoprint serve"
 volumes:
   octoprint:

@@ -9,7 +9,7 @@ base_dir = _default_basedir(_APPNAME)
 config_path = os.path.join(base_dir, 'config.yaml')
 if not os.path.isfile(os.path.join(base_dir, 'config.yaml')):
     os.makedirs(base_dir)
-    shutil.copyfile('/octoprint_dropbox_timelapse/octoprint-config.yaml',
+    shutil.copyfile('/octoprint_timelapse_uploader/octoprint-config.yaml',
                     os.path.join(base_dir, 'config.yaml'))
 
 settings = yaml.load(open(os.path.join(base_dir, 'config.yaml')), Loader=yaml.FullLoader)
@@ -47,9 +47,9 @@ if not os.path.isdir(os.path.join(base_dir, 'uploads')):
     os.makedirs(os.path.join(base_dir, 'uploads'))
 if not os.path.isdir(os.path.join(base_dir, 'plugins')):
     os.makedirs(os.path.join(base_dir, 'plugins'))
-shutil.copyfile('/octoprint_dropbox_timelapse/tests/cube.gcode',
+shutil.copyfile('/octoprint_timelapse_uploader/tests/cube.gcode',
                 os.path.join(base_dir, 'uploads', 'cube.gcode'))
-shutil.copyfile('/octoprint_dropbox_timelapse/tests/fake_timelapse_plugin.py',
+shutil.copyfile('/octoprint_timelapse_uploader/tests/fake_timelapse_plugin.py',
                 os.path.join(base_dir, 'plugins', 'fake_timelapse_plugin.py'))
-shutil.copyfile('/octoprint_dropbox_timelapse/tests/test.mp4',
+shutil.copyfile('/octoprint_timelapse_uploader/tests/test.mp4',
                 os.path.join(base_dir, 'plugins', 'test.mp4'))
