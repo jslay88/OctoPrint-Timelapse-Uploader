@@ -4,21 +4,21 @@
 ### Do not forget to adjust the following variables to your own plugin.
 
 # The plugin's identifier, has to be unique
-plugin_identifier = "dropbox_timelapse"
+plugin_identifier = "timelapse_uploader"
 
 # The plugin's python package, should be "octoprint_<plugin identifier>", has to be unique
-plugin_package = "octoprint_dropbox_timelapse"
+plugin_package = "octoprint_timelapse_uploader"
 
 # The plugin's human readable name. Can be overwritten within OctoPrint's internal data via __plugin_name__ in the
 # plugin module
-plugin_name = "OctoPrint-Dropbox-Timelapse"
+plugin_name = "OctoPrint-Timelapse-Uploader"
 
 # The plugin's version. Can be overwritten within OctoPrint's internal data via __plugin_version__ in the plugin module
-plugin_version = "0.1.3"
+plugin_version = "0.1.0"
 
 # The plugin's description. Can be overwritten within OctoPrint's internal data via __plugin_description__ in the plugin
 # module
-plugin_description = """Automatically upload rendered timelapses to Dropbox. Can also delete after upload to save space on the Raspberry Pi SD Card."""
+plugin_description = """Automatically upload rendered timelapses to various cloud storages. Can also delete after upload to save space on the Raspberry Pi SD Card."""
 
 # The plugin's author. Can be overwritten within OctoPrint's internal data via __plugin_author__ in the plugin module
 plugin_author = "Justin Slay, Sam Kemp, Brad Hochgesang"
@@ -27,7 +27,7 @@ plugin_author = "Justin Slay, Sam Kemp, Brad Hochgesang"
 plugin_author_email = "justin.slay@gmail.com"
 
 # The plugin's homepage URL. Can be overwritten within OctoPrint's internal data via __plugin_url__ in the plugin module
-plugin_url = "https://github.com/jslay88/OctoPrint-Dropbox-Timelapse"
+plugin_url = "https://github.com/jslay88/OctoPrint-Timelapse-Uploader"
 
 # The plugin's license. Can be overwritten within OctoPrint's internal data via __plugin_license__ in the plugin module
 plugin_license = "AGPLv3"
