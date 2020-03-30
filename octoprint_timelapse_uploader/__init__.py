@@ -1,15 +1,17 @@
 # coding=utf-8
 from __future__ import absolute_import
 
+import os
+
 import octoprint.plugin
 from octoprint.events import Events
-import os
+
 import dropbox
 from dropbox.files import WriteMode
 from dropbox.exceptions import ApiError, AuthError, BadInputError
 
 
-class DropboxTimelapsePlugin(octoprint.plugin.StartupPlugin,
+class TimelapseUploaderPlugin(octoprint.plugin.StartupPlugin,
                              octoprint.plugin.TemplatePlugin,
                              octoprint.plugin.SettingsPlugin,
                              octoprint.plugin.EventHandlerPlugin,
@@ -71,7 +73,7 @@ class DropboxTimelapsePlugin(octoprint.plugin.StartupPlugin,
 
     def get_template_configs(self):
         return [
-            dict(type='settings', custom_bindings=True, template='dropbox_timelapse_settings.jinja2')
+            dict(type='settings', custom_bindings=True, template='timelapse_uploader_settings.jinja2')
         ]
 
     def get_update_information(self):
@@ -87,7 +89,7 @@ class DropboxTimelapsePlugin(octoprint.plugin.StartupPlugin,
                 current=self._plugin_version,
 
                 # update method: pip
-                pip="https://github.com/jslay88/OctoPrint-Dropbox-Timelapse/archive/{target_version}.zip"
+                pip="https://github.com/jslay88/OctoPrint-Timelapse-Uploader/archive/{target_version}.zip"
             )
         )
 
@@ -187,12 +189,12 @@ class DropboxTimelapsePlugin(octoprint.plugin.StartupPlugin,
         )
 
 
-__plugin_name__ = "Dropbox Timelapse Plugin"
+__plugin_name__ = "Timelapse Uploader Plugin"
 
 
 def __plugin_load__():
     global __plugin_implementation__
-    __plugin_implementation__ = DropboxTimelapsePlugin()
+    __plugin_implementation__ = TimelapseUploaderPlugin()
 
     global __plugin_hooks__
     __plugin_hooks__ = {
