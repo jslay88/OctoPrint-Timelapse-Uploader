@@ -79,13 +79,13 @@ class TimelapseUploaderPlugin(octoprint.plugin.StartupPlugin,
     def get_update_information(self):
         return dict(
             dropbox_timelapse=dict(
-                displayName="Dropbox Timelapse Plugin",
+                displayName="Timelapse Uploader Plugin",
                 displayVersion=self._plugin_version,
 
                 # version check: github repository
                 type="github_release",
                 user="jslay88",
-                repo="OctoPrint-Dropbox-Timelapse",
+                repo="OctoPrint-Timelapse-Uploader",
                 current=self._plugin_version,
 
                 # update method: pip
